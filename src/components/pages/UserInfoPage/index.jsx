@@ -51,7 +51,7 @@ function UserInfoPage() {
 
   const changeNickname = (e) => {
     e.preventDefault();
-
+    console.log("hihi");
     if (user.nickname !== nickname) {
       requestUpdateUser();
       return;
@@ -166,7 +166,7 @@ function UserInfoPage() {
         <UserInfoButtonContainer>
           {isEditable ? (
             <>
-              <DefaultButton key="confirmEdit" type="submit" width="500px">
+              <DefaultButton type="submit" width="500px">
                 수정확인
               </DefaultButton>
               <DefaultButton
@@ -182,7 +182,6 @@ function UserInfoPage() {
           ) : (
             <>
               <DefaultButton
-                key="edit"
                 width="500px"
                 type="button"
                 onClick={(e) => {
